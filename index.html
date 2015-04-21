@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>So, you want to build Real-time API. Where do you start?</title>
+    <title>So, you want to build a Real-time API. Where do you start?</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="stylesheet" href="./bower_components/pusher-remark-themes/theme.css" />
     <style type="text/css">
@@ -58,29 +58,6 @@
         clear: both;
       }
 
-      .native-components {
-        font-size: 20px;
-      }
-      .native-components input,
-      .native-components select,
-      .native-components button {
-        font-size: 30px;
-        /*width: 20%;*/
-      }
-      .native-components select {
-        -webkit-appearance: menulist-button;
-      }
-      .native-components input[type=checkbox] {
-        /* All browsers except webkit*/
-        transform: scale(1.5);
-
-        /* Webkit browsers*/
-        -webkit-transform: scale(1.5);
-      }
-      .native-components code {
-        text-align: left;
-      }
-
       .remark-slide-number {
         bottom: 12px;
         opacity: 0.5;
@@ -89,149 +66,16 @@
         font-size: 20px;
       }
 
-      .stats table {
-        font-size: 20px;
-        width: 100%;
-      }
-
-      .stats table thead {
-        font-weight: bold;
-      }
-
-      .stats table thead td {
-        vertical-align: top;
-      }
-
-      .stats table tbody td {
-        text-align: center;
-        width: 18%;
-      }
-
-      .stats table tbody tr td:first-of-type {
-        text-align: left;
-        width: 28%;
-        text-shadow: 1px 1px 0px #fff;
-      }
-
-      .stats table .yes {
-        background-color: green;
-        color: white;
-      }
-
-      .stats table .maybe {
-        background-color: orange;
-        color: white;
-      }
-
-      .stats table .no {
-        background-color: red;
-        color: white;
-      }
-
       small {
         font-size: 14px;
-      }
-
-      .stats table a:link {
-        color: #666;
-        font-weight: bold;
-        text-decoration:none;
-      }
-      .stats table a:visited {
-        color: #999999;
-        font-weight:bold;
-        text-decoration:none;
-      }
-      .stats table a:active,
-      .stats table a:hover {
-        color: #bd5a35;
-        text-decoration:underline;
-      }
-      .stats table {
-        /*font-family:Arial, Helvetica, sans-serif;*/
-        color:#666;
-        /*font-size:12px;*/
-        /*text-shadow: 1px 1px 0px #fff;*/
-        background:#eaebec;
-        margin:20px;
-        border:#ccc 1px solid;
-
-        -moz-border-radius:3px;
-        -webkit-border-radius:3px;
-        border-radius:3px;
-
-        -moz-box-shadow: 0 1px 2px #d1d1d1;
-        -webkit-box-shadow: 0 1px 2px #d1d1d1;
-        box-shadow: 0 1px 2px #d1d1d1;
-      }
-      .stats table th {
-        padding:21px 25px 22px 25px;
-        border-top:1px solid #fafafa;
-        border-bottom:1px solid #e0e0e0;
-
-        background: #ededed;
-        background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
-        background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
-      }
-      .stats table th:first-child {
-        text-align: left;
-        padding-left:20px;
-      }
-      .stats table tr:first-child th:first-child {
-        -moz-border-radius-topleft:3px;
-        -webkit-border-top-left-radius:3px;
-        border-top-left-radius:3px;
-      }
-      .stats table tr:first-child th:last-child {
-        -moz-border-radius-topright:3px;
-        -webkit-border-top-right-radius:3px;
-        border-top-right-radius:3px;
-      }
-      .stats table tr {
-        text-align: center;
-        padding-left:20px;
-      }
-      .stats table td:first-child {
-        text-align: left;
-        padding-left:20px;
-        border-left: 0;
-      }
-      .stats table td {
-        padding:18px;
-        border-top: 1px solid #ffffff;
-        border-bottom:1px solid #e0e0e0;
-        border-left: 1px solid #e0e0e0;
-
-        /*background: #fafafa;
-        background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
-        background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);*/
-      }
-      .stats table tr.even td {
-        /*background: #f6f6f6;
-        background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
-        background: -moz-linear-gradient(top,  #f8f8f8,  #f6f6f6);*/
-      }
-      .stats table tr:last-child td {
-        border-bottom:0;
-      }
-      .stats table tr:last-child td:first-child {
-        -moz-border-radius-bottomleft:3px;
-        -webkit-border-bottom-left-radius:3px;
-        border-bottom-left-radius:3px;
-      }
-      .stats table tr:last-child td:last-child {
-        -moz-border-radius-bottomright:3px;
-        -webkit-border-bottom-right-radius:3px;
-        border-bottom-right-radius:3px;
-      }
-      .stats table tr:hover td {
-        /*background: #f2f2f2;
-        background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
-        background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);*/
       }
       
       .fixed-ul ul {
         width: 100%;
+      }
+      
+      .remark-slide img {
+        max-width: 100%;
       }
     </style>
   </head>
@@ -250,127 +94,5 @@
         ratio: "4:3"
       });
     </script>
-
-    <template id="my-avatar-template">
-      <style>
-        .container { background-color: cyan; }
-        .float-right { width: 130px; float: right; }
-        img { float: left; }
-        .username { font-size: 18px; float: right; clear: right; }
-        .service { font-size: 14px; float: right; clear: right; }
-      </style>
-      <div class="container float-right">
-        <img class="avatar" />
-        <span class="username"></span>
-        <span class="service"></span>
-      </div>
-    </template>
-
-    <template id="my-avatar-shadow-tmpl">
-      <style>
-        .container { background-color: red; color: white; }
-        .float-right { width: 130px; float: right; }
-        #avatar { float: left; }
-        #username { font-size: 18px; float: right; clear: right; }
-        #service { font-size: 14px; float: right; clear: right; }
-      </style>
-      <div class="container float-right">
-        <img id="avatar" />
-        <span id="username"></span>
-        <span id="service"></span>
-      </div>
-    </template>
-    
-    <template id="custom-event-tmpl">
-      <style>
-        img {
-          width: 100px;
-          height: 100px;
-        }
-        img.spin {
-          width: 100px;
-          height: 100px;
-          -webkit-animation:spin 4s linear infinite;
-          -moz-animation:spin 4s linear infinite;
-          animation:spin 4s linear infinite;
-        }
-        @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-        @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-        @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-      </style>
-      <img src="./img/smile.png" />
-    </template>
-
-    <!-- Angular -->
-
-    <script src="js/angular.min.js"></script>
-    <script>
-      angular.module('demo', [])
-      .directive('ngAvatar', function () {
-        return {
-          restrict:"AEC",
-          scope: {
-            service: '@',
-            username: '@'
-          },
-          template: '<img src="http://avatars.io/{{service}}/{{username}}" />'
-        };
-      });
-    </script>
-
-    <!-- Ember -->
-
-    <!--script src="js/jquery-1.10.0.min.js"></script>
-    <script src="js/handlebars.js"></script>
-    <script src="js/ember.js"></script>
-    <script>
-      var App = Ember.Application.create();
-
-      App.Router.reopen({
-        location: 'none'
-      });
-
-      App.MyAvatarComponent = Ember.Component.extend({
-        url: function () {
-          return 'http://avatars.io/' + this.get( 'service' ) + '/' + this.get( 'username' );
-        }.property( 'username' , 'service' )
-      });
-    </script>
-
-    <script type="text/x-handlebars" id="components/my-avatar">
-      <img {{bind-attr src=url}} />
-    </script-->
-
-    <!-- ReactJS -->
-    <script src="js/react.js"></script>
-    <script src="js/JSXTransformer.js"></script>
-    <script type="text/jsx">
-    var ReAvatar = React.createClass({
-      render: function() {
-        return (
-          <img
-          src={"http://avatars.io/" + this.props.service + "/" + this.props.username} />
-        );
-      }
-    });
-    React.render(
-      <ReAvatar service="twitter" username="leggetter" />,
-      document.querySelector('re-avatar')
-    );
-    </script>
-
-    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
-    <link rel="import" href="bower_components/polymer/polymer.html">
-    <polymer-element name="po-avatar" attributes="service username">
-      <template>
-        <img src="http://avatars.io/{{service}}/{{username}}" />
-      </template>
-
-      <script>
-        Polymer('po-avatar', {});
-      </script>
-    </polymer-element>
-
-    <script src="js/demos.js"></script>
   </body>
 </html>

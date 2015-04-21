@@ -7,7 +7,7 @@ class: bg-light, center, middle
 
 class: title
 
-# So, you want to build Real-time API. Where do you start?
+# So, you want to build a Real-time API. Where do you start?
 
 * <span class="speaker">Phil @leggetter</span>
 * <span class="speaker-job-title">Head of Evangelism</span>
@@ -22,10 +22,10 @@ class: title
 
 * 5 Reasons you should offer a Real-Time API
 * Transports
-* Data
+* Communication Patterns
 * Real-Time API Quiz
-* Tools
 * Frameworks
+* Tools
 * Security
 * Scaling
 
@@ -67,16 +67,14 @@ background-image: url(./img/core-breach.gif)
 
 ## Time Factor
 
-* Notifications
 * Monitoring
-* Market data
-* Betting
-* Incoming phone calls
+* Market data & betting
 * Short-lived deals/offers
+* Communications e.g. phone calls & chat
 
 ---
 
-# 3. Developer Convenience
+# 3. Developer Empowerment + Convenience
 
 ---
 
@@ -238,6 +236,13 @@ class: bg-dark
 
 ---
 
+## Server-Sent Events
+
+If you're considering either HTTP Long-Polling or HTTP Streaming then align with the
+[Server-Sent Events standard](http://www.w3.org/TR/2009/WD-eventsource-20091029/).
+
+---
+
 background-image: url(./img/websocket.png)
 
 ---
@@ -274,17 +279,225 @@ class: bg-dark
 
 class: bg-dark
 
-# Data
+# Real-Time Communication Patterns
 
 ???
 
 ---
 
-todo
+## Real-Time Communication Patterns
+
+* Simple messaging
+* Publish-Subscribe
+* RPC/RMI
+* Data Sync
+
+???
+
+---
+
+## Simple messaging
+
+No abstractions. Just messages.
+
+* Fits well with HTTP/REST :)
+* Many persistent connections :(
+* Single connection + complex data = message complexity :(
+
+???
+
+* Keep existing RESTful GET endpoints
+* Allow GET requests to be long-held
+* Infrastructure to support connections
+* Clients need to make many connections
+
+---
+
+## PubSub
+
+Subscribe & Publish on "channels"
+
+* URLs can identify "channels" :)
+* Many persistent connections :(
+* New endpoint + Protocol required for efficiency :(
+* Clearly partitions complex data :)
+* Requires SDK
+
+???
+
+* Efficient PubSub requires push over single connection
+* WebSocket required if subscriptions change frequently
+* Or client publishes frequently
+
+---
+
+## RPC/RMI
+
+Call API "methods"
+
+* New endpoint + Protocol required for efficiency :(
+* SDK required
+* Hides network activity from developer
+
+???
+
+*
+
+---
+
+## Data Sync
+
+Interact with, and synchronize, data structures
+
+* New endpoint + Protocol required for efficiency :(
+* New paradigm
+* SDK required
+* Hides network activity from developer
+
+???
+
+* 
+
+---
+
+background-image: url(./img/rtw-api-decision-matrix-bg-white.png)
 
 ---
 
 # Real-Time API Quiz
+## Example Scenarios
+
+1. What transport?
+2. What communication pattern?
+3. What's the company?
+
+---
+
+class: top
+
+## Scenario 1
+
+* Predefine query within service
+* Push to servers
+* Frequent data updates
+* Potentially large message payloads
+
+--
+* **HTTP Streaming**
+
+--
+* **Simple messaging**
+
+--
+
+![DataSift logo](./img/datasift.png)
+
+---
+
+class: top
+
+## Scenario 2
+
+* Push to server
+* Occasional data updates ("events")
+* Delivery within ~1 of event
+
+--
+* **WebHooks**
+
+--
+* **Simple messaging**
+
+--
+
+![Twilio Logo](./img/twilio.png)
+
+---
+
+class: top
+
+## Scenario 3
+
+* Push to browsers, native mobile & anywhere
+* Frequent data updates ("events")
+* Delivery within 250ms
+* Partitioned data
+
+--
+* **WebSocket** + HTTP fallback
+
+--
+* **PubSub** + events
+
+--
+
+![Pusher Logo](./bower_components/pusher-remark-themes/img/pusher-logos/pusher-slogan-dark.png)
+
+---
+
+class: top
+
+## Scenario 4
+
+* Multi-device comms via central storage
+* Frequent data updates
+* Delivery within 1s
+
+--
+* **WebSocket** (+ HTTP Streaming)
+
+--
+* **Data Sync**
+
+--
+
+![nest Logo](./img/nest.png)
+
+---
+
+class: bg-white
+background-image: url('./img/apps-with-realtime-apis.png')
+
+???
+
+* This image shows only "apps" with realtime APIs
+* Not included API services - Pusher, Twilio, SendGrid, MailJet, Firebase etc.
+
+---
+
+class: bg-dark
+
+# Real-Time API Frameworks
+
+???
+
+---
+
+class: bg-white
+background-image: url(./img/realtime-web-solutions-updated.png)
+
+---
+
+class: top
+
+## Choose one that meets your requirements
+
+How do you do that?
+
+--
+
+1. Choose one that offers the functionality you need
+--
+
+2. Watch my videos :)
+
+<a href="https://www.youtube.com/watch?v=PUENh1Ym9E4"><img src="./img/10min-guide-realtime.png" width="40%" style="float: left; margin-left: 5%;" /></a>
+
+<a href="https://www.youtube.com/watch?v=VENVNimklWg"><img src="./img/fowa-choosing-realtime.png" width="40%" style="float:right; margin-right: 5%;" /></a>
+
+---
+
+background-image: url(./img/rtw-tech-decision-matrix-solutions.png)
 
 ---
 
@@ -296,15 +509,7 @@ class: bg-dark
 
 ---
 
-todo
-
----
-
-class: bg-dark
-
-# Real-Time API Frameworks
-
-???
+## Are there any?
 
 ---
 
@@ -339,24 +544,16 @@ todo
 ## Resources
 
 * http://pusher.com - easily add realtime messaging to your apps
-* http://webcomponents.org/
-* https://www.polymer-project.org
-* [Eric Bidelman's Google IO 2014 talk](http://polymer-change.appspot.com/)
-* [Angular Material](https://material.angularjs.org/)
-* [Google Material Design](http://www.google.com/design/spec/material-design/introduction.html)
-* [HTML Template Chooser](http://garann.github.io/template-chooser/)
-* [IE UserVoice forum](https://wpdev.uservoice.com/forums/257854-internet-explorer-platform/filters/top)
-* [Source for these slides](https://github.com/leggetter/web-components-now/tree/devweek-2015)
 
 ---
 
 class: title
 
-# Why you should be using Web Components Now. And How.
+# So, you want to build a Real-time API. Where do you start?
 
 ## Questions?
 
-[leggetter.github.io/web-components-now](leggetter.github.io/web-components-now)
+[leggetter.github.io/realtime-apis](http://leggetter.github.io/realtime-apis)
 
 * <span class="speaker">Phil @leggetter</span>
 * <span class="speaker-job-title">Head of Evangelism</span>
