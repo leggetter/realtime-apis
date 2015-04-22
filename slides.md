@@ -22,12 +22,11 @@ class: title
 
 * 5 Reasons you should offer a Real-Time API
 * Transports
+* ~~Protocols~~
 * Communication Patterns
+* ~~Security & Scaling~~
+* Frameworks & Tools
 * Real-Time API Quiz
-* Frameworks
-* Tools
-* Security
-* Scaling
 
 ---
 
@@ -74,7 +73,7 @@ background-image: url(./img/core-breach.gif)
 
 ---
 
-# 3. Developer Empowerment + Convenience
+# 3. Developer Empowerment + Experience
 
 ---
 
@@ -95,46 +94,14 @@ class: center, bg-cover, em-text, trans-h, top
 
 ---
 
-class: em-text, bg-cover, trans-h, top
-background-image: url(./img/itv-news-may-2014.png)
-
-# Notifications & Signalling
-
----
-
-class: bg-video, em-text, trans-h, top, vid-width-100
-
-# Analytics/Visualizations
-
-<video id="video" autoplay="true" loop="true">
-	<source src="./img/librato.mp4" type="video/mp4">
-</video>
+<img width="20%" src="./img/facebook.png" />
+<img width="20%" src="./img/uservoice.png" />
+<img width="25%" src="./img/google-docs.png" />
+<img width="20%" src="./img/uber.png" />
 
 ---
 
-class: center, bg-cover, em-text, trans-h, top
-background-image: url(./img/delighted-app.gif)
-
-# Activity Streams
-
-???
-
-* a stream of activity
-* things have - and are - happening
-* synonymous with social apps
-
----
-
-class: bg-dark, bg-cover, em-text, trans-h, top
-background-image: url(./img/sprintly.jpg)
-
-# Multi-User Collaboration
-
-???
-
----
-
-## Enable your customers to Build Apps with Real-Time Features
+## Enable your customers to Build Apps with Real-Time Features with your API
 
 ---
 
@@ -142,8 +109,18 @@ background-image: url(./img/sprintly.jpg)
 
 * Quick business value
 * Time Factor/Constraints
-* Developer convenience
+* Developer Empowerment + DX
 * Building Real-Time features
+
+---
+
+class: bg-white
+background-image: url('./img/apps-with-realtime-apis.png')
+
+???
+
+* This image shows only "apps" with realtime APIs
+* Not included API services - Pusher, Twilio, SendGrid, MailJet, Firebase etc.
 
 ---
 
@@ -153,14 +130,13 @@ class: bg-dark
 
 ???
 
-* How do you deliver the real-time data to your API consumers
-* 6 low-level possibilities
+* How do you deliver the real-time data to your API consumers?
 
 ---
 
 class: bg-dark
 
-## Factor to consider
+## Factors to consider
 
 * API Consumer? Server or Client
 * Message update frequency
@@ -170,47 +146,38 @@ class: bg-dark
 
 ---
 
-class: bg-dark
+class: bg-dark, top
 
 ## WebHooks
 
----
-
-class: bg-dark
-
-## WebHooks
+--
 
 * Server only
 * Low update rates
 * Uni-directional
 * Avg. latency
-* Avg. efficiency
+* High. efficiency (for servers)
 
 ---
 
 background-image: url(./img/polling.png)
+class: bg-dark, trans-all
 
----
-
-class: bg-dark
-
-## HTTP Polling
+--
 
 * Server or Client
 * Low update rates
 * Batched bi-directional
 * High latency
 * Low efficiency
-
+--
+<img src="./img/no-entry.png" class="fill overlay" />
 ---
 
 background-image: url(./img/long-polling.png)
+class: bg-dark, trans-all
 
----
-
-class: bg-dark
-
-## HTTP Long-Polling
+--
 
 * Server or Client
 * Avg. update rates
@@ -221,12 +188,9 @@ class: bg-dark
 ---
 
 background-image: url(./img/streaming.png)
+class: bg-dark, trans-all
 
----
-
-class: bg-dark
-
-## HTTP Streaming
+--
 
 * Server or Client
 * High update rates
@@ -244,12 +208,9 @@ If you're considering either HTTP Long-Polling or HTTP Streaming then align with
 ---
 
 background-image: url(./img/websocket.png)
+class: bg-dark, trans-all
 
----
-
-class: bg-dark
-
-## WebSocket
+--
 
 * Server or Client (normally client)
 * High update rates
@@ -259,15 +220,11 @@ class: bg-dark
 
 ---
 
-class: bg-dark
+class: bg-dark, top
 
 ## WebRTC
 
----
-
-class: bg-dark
-
-## WebRTC
+--
 
 * Server or Client (normally client to client)
 * High update rates
@@ -280,6 +237,8 @@ class: bg-dark
 class: bg-dark
 
 # Real-Time Communication Patterns
+
+(Not considering WebHooks)
 
 ???
 
@@ -300,9 +259,9 @@ class: bg-dark
 
 No abstractions. Just messages.
 
-* Fits well with HTTP/REST :)
-* Many persistent connections :(
-* Single connection + complex data = message complexity :(
+* Fits well with HTTP/REST
+* Many persistent connections
+* Single connection + complex data = message complexity
 
 ???
 
@@ -317,10 +276,9 @@ No abstractions. Just messages.
 
 Subscribe & Publish on "channels"
 
-* URLs can identify "channels" :)
-* Many persistent connections :(
-* New endpoint + Protocol required for efficiency :(
-* Clearly partitions complex data :)
+* Channels. Multiplexed. Single connection
+* Clearly partitions complex data
+* Dedicated endpoint
 * Requires SDK
 
 ???
@@ -335,7 +293,7 @@ Subscribe & Publish on "channels"
 
 Call API "methods"
 
-* New endpoint + Protocol required for efficiency :(
+* Dedicated endpoint + protocol
 * SDK required
 * Hides network activity from developer
 
@@ -349,7 +307,7 @@ Call API "methods"
 
 Interact with, and synchronize, data structures
 
-* New endpoint + Protocol required for efficiency :(
+* Dedicated endpoint + Protocol
 * New paradigm
 * SDK required
 * Hides network activity from developer
@@ -360,7 +318,67 @@ Interact with, and synchronize, data structures
 
 ---
 
+class: bg-dark
+
+# Real-Time API Frameworks
+
+???
+
+---
+
+class: bg-white
+background-image: url(./img/realtime-web-solutions-updated.png)
+
+---
+
+class: top
+
+## Choose one that meets your requirements
+
+How do you do that?
+
+--
+
+1. Choose one that offers the functionality you need
+--
+
+2. Watch my videos :)
+
+<a href="https://www.youtube.com/watch?v=PUENh1Ym9E4"><img src="./img/10min-guide-realtime.png" width="40%" style="float: left; margin-left: 5%;" /></a>
+
+<a href="https://www.youtube.com/watch?v=VENVNimklWg"><img src="./img/fowa-choosing-realtime.png" width="40%" style="float:right; margin-right: 5%;" /></a>
+
+---
+
 background-image: url(./img/rtw-api-decision-matrix-bg-white.png)
+
+---
+
+background-image: url(./img/rtw-tech-decision-matrix-solutions.png)
+
+---
+
+class: bg-dark
+
+# Real-Time API Tools
+
+???
+
+---
+
+## Real-Time API Tools? Not Many
+
+* Lots for WebHooks - it's HTTP
+* [SwaggerSocket - REST over WS](https://github.com/swagger-api/swagger-socket)
+* Fanout.io<sup>†</sup>
+* StreamData.io<sup>†</sup>
+* SailsJS<sup>†</sup>
+
+<small>† frameworks, but offer a form of tooling</small>
+
+???
+
+* No standard for WebHooks other than POST and signed auth
 
 ---
 
@@ -455,95 +473,10 @@ class: top
 
 ---
 
-class: bg-white
-background-image: url('./img/apps-with-realtime-apis.png')
-
-???
-
-* This image shows only "apps" with realtime APIs
-* Not included API services - Pusher, Twilio, SendGrid, MailJet, Firebase etc.
-
----
-
-class: bg-dark
-
-# Real-Time API Frameworks
-
-???
-
----
-
-class: bg-white
-background-image: url(./img/realtime-web-solutions-updated.png)
-
----
-
-class: top
-
-## Choose one that meets your requirements
-
-How do you do that?
-
---
-
-1. Choose one that offers the functionality you need
---
-
-2. Watch my videos :)
-
-<a href="https://www.youtube.com/watch?v=PUENh1Ym9E4"><img src="./img/10min-guide-realtime.png" width="40%" style="float: left; margin-left: 5%;" /></a>
-
-<a href="https://www.youtube.com/watch?v=VENVNimklWg"><img src="./img/fowa-choosing-realtime.png" width="40%" style="float:right; margin-right: 5%;" /></a>
-
----
-
-background-image: url(./img/rtw-tech-decision-matrix-solutions.png)
-
----
-
-class: bg-dark
-
-# Real-Time API Tools
-
-???
-
----
-
-## Are there any?
-
----
-
-todo
-
----
-
-class: bg-dark
-
-# Securing Real-Time APIs
-
-???
-
----
-
-todo
-
----
-
-class: bg-dark
-
-# Scaling Real-Time APIs
-
-???
-
----
-
-todo
-
----
-
 ## Resources
 
-* http://pusher.com - easily add realtime messaging to your apps
+* leggetter.github.io/realtime-apis - slides
+* https://pusher.com - easily add realtime messaging to your apps
 
 ---
 
