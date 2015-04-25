@@ -90,6 +90,25 @@
       .overlay {
         z-index: 100;
       }
+      
+      .remark-slide-number {
+        display: none;
+      }
+      
+      #twitter_id {
+        font-size: 16pt;
+        
+        position: fixed;
+        right: 20px;
+        bottom: 10px;
+        color: #fff;
+        z-index: 100000;
+      }
+      #twitter_id a,
+      #twitter_id a:visited {
+        color: #fff;
+        text-decoration: none;
+      }
     </style>
   </head>
   <body>
@@ -101,11 +120,14 @@
         sourceUrl: 'slides.md',
         highlightLanguage: 'remark',
         navigation: {
-          scroll: false,
-
+          scroll: false
         },
-        ratio: "4:3"
+        ratio: "16:9"
       });
     </script>
+    
+    <div id="twitter_id">
+      <a href="https://twitter.com/leggetter">@leggetter</a>
+    </div>
   </body>
 </html>

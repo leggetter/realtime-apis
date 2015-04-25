@@ -15,6 +15,12 @@ class: title
 
 ???
 
+* Pusher is a hosted service with APIs & SDKs that make it easy to integrate
+real-time data and functionality into web, mobile and IoT apps using any
+technology at any stage of development.
+* Our customers tend to be building app.
+* But some of those customers also share their data with their customers
+* Effectively making us a Real-Time API infrastructure
 
 ---
 
@@ -22,11 +28,12 @@ class: title
 
 * 5 Reasons you should offer a Real-Time API
 * Transports
-* ~~Protocols~~
 * Communication Patterns
+* ~~Protocols~~
 * ~~Security & Scaling~~
 * Frameworks & Tools
-* Real-Time API Quiz
+* Conclusion
+* Real-Time API Quiz (if time)
 
 ---
 
@@ -36,7 +43,32 @@ class: bg-dark
 
 ---
 
-# 1. Faster access to business value
+# 1. You have Real-Time Data
+
+---
+
+## Finding the Real-Time Data
+
+Any **event** in your system = **Real-Time Data**
+
+* Changes in data
+* System interactions
+* User interactions
+
+---
+
+<a href="https://www.youtube.com/watch?v=P31lGHG_lL4">
+	<img width="80%" src="./img/you-have-realtime-goffice-record.png" />
+</a>
+
+
+<a href="https://www.youtube.com/watch?v=P31lGHG_lL4">
+youtube.com/watch?v=P31lGHG_lL4
+</a>
+
+---
+
+# 2. Faster access to business value
 
 ???
 
@@ -45,7 +77,7 @@ class: bg-dark
 
 ---
 
-# 2. Some Data has a Time Factor
+# 3. Some Data has a Time Factor
 
 ---
 
@@ -58,9 +90,18 @@ class: em-text, trans-h, top
 
 ## Warp Core as a Service
 
+???
+
+* The saftey system monitoring API needs to be realtime
+
 ---
 
 background-image: url(./img/core-breach.gif)
+
+???
+
+* Or the Chief Engineer won't be happy
+* Saucer separation scenario
 
 ---
 
@@ -68,12 +109,12 @@ background-image: url(./img/core-breach.gif)
 
 * Monitoring
 * Market data & betting
-* Short-lived deals/offers
 * Communications e.g. phone calls & chat
+* Collaborative experiences
 
 ---
 
-# 3. Developer Empowerment + Experience
+# 4. Developer Empowerment + Experience
 
 ---
 
@@ -90,7 +131,7 @@ class: center, bg-cover, em-text, trans-h, top
 
 ---
 
-# 4. Users Expect Real-Time Experiences
+# 5. Users Expect Real-Time Experiences
 
 ---
 
@@ -105,12 +146,13 @@ class: center, bg-cover, em-text, trans-h, top
 
 ---
 
-# 5. A Mixture
+# Why have a Real-Time API?
 
+* You have real-time data. Gain value from it!
 * Quick business value
 * Time Factor/Constraints
-* Developer Empowerment + DX
-* Building Real-Time features
+* Improve the Developer Experience & Empower them
+* Help consumers building Real-Time features
 
 ---
 
@@ -236,15 +278,15 @@ class: bg-dark, top
 
 class: bg-dark
 
-# Real-Time Communication Patterns
+# Real-Time Tech Communication Patterns
 
-(Not considering WebHooks)
+(Not considering WebHooks or WebRTC)
 
 ???
 
 ---
 
-## Real-Time Communication Patterns
+## Real-Time Tech Communication Patterns
 
 * Simple messaging
 * Publish-Subscribe
@@ -261,7 +303,6 @@ No abstractions. Just messages.
 
 * Fits well with HTTP/REST
 * Many persistent connections
-* Single connection + complex data = message complexity
 
 ???
 
@@ -382,6 +423,44 @@ class: bg-dark
 
 ---
 
+class: top
+
+## So, you want to build a Real-time API. Where do you start?
+
+1. **Understand** & **Identify** your valuable Real-Time Data (**Events**)
+2. Define the API Consumer and choose **Transports**
+3. Decide on the best **Communication Pattern**
+4. Can an existing **Real-Time Framework** help?
+--
+
+5. We need better Real-Time API tooling 
+
+???
+
+1.
+2. Consumed by server, browser, mobile, fridge... ?
+3. For your API functionality
+
+---
+
+class: title
+
+# So, you want to build a Real-time API. Where do you start?
+
+## Questions?
+
+[leggetter.github.io/realtime-apis](http://leggetter.github.io/realtime-apis/)
+
+* <span class="speaker">Phil @leggetter</span>
+* <span class="speaker-job-title">Head of Evangelism</span>
+* <span class="speaker-pusher-logo"></span>
+
+---
+
+# Appendix
+
+---
+
 # Real-Time API Quiz
 ## Example Scenarios
 
@@ -475,8 +554,9 @@ class: top
 
 ## Resources
 
-* leggetter.github.io/realtime-apis - slides
-* https://pusher.com - easily add realtime messaging to your apps
+* [leggetter.github.io/realtime-apis](http://leggetter.github.io/realtime-apis/) - slides
+* [pusher.com](https://pusher.com) - real-time infrastructure as a service
+* [Real-Time Technology Guide](http://www.leggetter.co.uk/real-time-web-technologies-guide/)
 
 ---
 
@@ -486,7 +566,7 @@ class: title
 
 ## Questions?
 
-[leggetter.github.io/realtime-apis](http://leggetter.github.io/realtime-apis)
+[leggetter.github.io/realtime-apis](http://leggetter.github.io/realtime-apis/)
 
 * <span class="speaker">Phil @leggetter</span>
 * <span class="speaker-job-title">Head of Evangelism</span>
